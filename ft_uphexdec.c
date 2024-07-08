@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-
-char	ft_if(unsigned int num)
+char	ft_upif(unsigned int num)
 {
 	if (num % 16 > 0 && num % 16 <= 9)
 		return (num % 16 + 48);
@@ -20,7 +17,7 @@ char	ft_if(unsigned int num)
 	return (0);
 }
 
-int	ft_hexdecz(unsigned int num)
+int	ft_uphexdecz(unsigned int num)
 {
 	unsigned int	r;
 	char c;
@@ -33,20 +30,20 @@ int	ft_hexdecz(unsigned int num)
 	{
 		r = num % 16;
 		c = ft_if(r);
-		ft_hexdecz(num / 16);
+		ft_uphexdecz(num / 16);
 		write (1, &c, 1);
 	}
 	return (1);
 }
 
-int	ft_hexdec(unsigned int num)
+int	ft_uphexdec(unsigned int num)
 {
 	if (num == 0)
 	{
 		write (1, "0", 1);
 		return (0);
 	}
-	ft_hexdecz(num);
+	ft_uphexdecz(num);
 	return (0);
 }
 
