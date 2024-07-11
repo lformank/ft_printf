@@ -1,7 +1,16 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ptr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/11 10:23:42 by lformank          #+#    #+#             */
+/*   Updated: 2024/07/11 11:19:02 by lformank         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
 
 char	ft_ptrif(unsigned long num)
 {
@@ -22,10 +31,10 @@ char	ft_ptrif(unsigned long num)
 	return (0);
 }
 
-int	ft_ptrhexdecz(unsigned long num, int i)
+int	ft_ptrhexdec(unsigned long num, int count)
 {
 	unsigned int	r;
-	char	c;
+	char			c;
 
 	if (num == 0)
 		return (0);
@@ -33,33 +42,30 @@ int	ft_ptrhexdecz(unsigned long num, int i)
 	{
 		r = num % 16;
 		c = ft_ptrif(r);
-		i = 1 + ft_ptrhexdecz(num / 16, i);
+		count = 1 + ft_ptrhexdec(num / 16, count);
 		write (1, &c, 1);
 	}
-	return (i);
+	return (count);
 }
 
-int	ft_ptrhexdec(unsigned long num)
+int	ft_ptr(unsigned long num, int count)
 {
-	int	i;
-
-	i = 0;
 	if (num == 0)
 	{
 		write (1, "0", 1);
-		i++;
-		return (i);
+		count++;
+		return (count);
 	}
 	write(1, "0x", 2);
-	i += 3;
-	i += ft_ptrhexdecz(num, i);
-	return (i);
+	count += 2;
+	count += ft_ptrhexdec(num, count);
+	return (count);
 }
 
 /*int	main()
 {
-	unsigned long int	i = 1000;
+	char	*i = "1000";
 	
-	printf("\n%d\n", ft_ptrhexdec((unsigned long)&i));
+	printf("\n%d\n", ft_ptr((unsigned long)&i, 0));
 	printf("%d\n", printf("%p\n", &i));
 }*/

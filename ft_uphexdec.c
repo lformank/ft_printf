@@ -1,56 +1,69 @@
-char	ft_upif(unsigned int num)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_uphexdec.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/11 10:34:10 by lformank          #+#    #+#             */
+/*   Updated: 2024/07/11 11:32:27 by lformank         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+char	ft_ifup(unsigned int num)
 {
-	if (num % 16 > 0 && num % 16 <= 9)
+	if (num % 16 >= 0 && num % 16 <= 9)
 		return (num % 16 + 48);
 	else if (num % 16 == 10)
-		return('A');
+		return ('A');
 	else if (num % 16 == 11)
-		return('B');
+		return ('B');
 	else if (num % 16 == 12)
-		return('C');
+		return ('C');
 	else if (num % 16 == 13)
-		return('D');
+		return ('D');
 	else if (num % 16 == 14)
-		return('E');
+		return ('E');
 	else if (num % 16 == 15)
-		return('F');
+		return ('F');
 	return (0);
 }
 
-int	ft_uphexdecz(unsigned int num)
+int	ft_uphexdecz(unsigned int number, int count)
 {
 	unsigned int	r;
-	char c;
+	char			c;
+	unsigned int	num;
 
+	num = number;
 	if (num == 0)
-		write (1, 0, 1);
-	if (num % 16 == 0)
 		return (0);
 	else
 	{
 		r = num % 16;
-		c = ft_if(r);
-		ft_uphexdecz(num / 16);
+		c = ft_ifup(r);
+		count = 1 + ft_uphexdecz(num / 16, count);
 		write (1, &c, 1);
 	}
-	return (1);
+	return (count);
 }
 
-int	ft_uphexdec(unsigned int num)
+int	ft_uphexdec(unsigned int num, int count)
 {
 	if (num == 0)
 	{
 		write (1, "0", 1);
-		return (0);
+		count++;
+		return (count);
 	}
-	ft_uphexdecz(num);
-	return (0);
+	count += ft_uphexdecz(num, count);
+	return (count);
 }
 
 /*int	main()
 {
-	unsigned int	i = 433333333;
-
-	ft_hexdec(i);
-	printf("\n%x", i);
+	ft_uphexdec(150047, 0);
+	printf("\n%X", 150047);
 }*/
