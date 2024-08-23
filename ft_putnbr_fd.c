@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "ft_printf.h"
 
-unsigned int	ft_size(unsigned int n)
+unsigned int	ft_sizee(unsigned int n)
 {
 	int	i;
 
@@ -26,7 +25,7 @@ unsigned int	ft_size(unsigned int n)
 	return (i);
 }
 
-unsigned int	ft_negativ(int n, int fd)
+unsigned int	ft_negative(int n, int fd)
 {
 	if (n < 0)
 	{
@@ -42,8 +41,8 @@ void	ft_putnbr_fd(int n, int fd)
 	unsigned int	size;
 	unsigned int	positiv;
 
-	positiv = ft_negativ(n, fd);
-	size = ft_size(positiv);
+	positiv = ft_negative(n, fd);
+	size = ft_sizee(positiv);
 	while (size > 0)
 	{
 		nbr = (positiv / size + 48);

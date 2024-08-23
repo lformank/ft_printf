@@ -14,8 +14,10 @@
 
 char	ft_ptrif(unsigned long num)
 {
-	if (num % 16 >= 0 && num % 16 <= 9)
+	if (num % 16 > 0 && num % 16 <= 9)
 		return (num % 16 + 48);
+	else if (num == 0)
+		return ('0');
 	else if (num % 16 == 10)
 		return ('a');
 	else if (num % 16 == 11)
