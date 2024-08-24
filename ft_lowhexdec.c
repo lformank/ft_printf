@@ -6,7 +6,7 @@
 /*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:32:01 by lformank          #+#    #+#             */
-/*   Updated: 2024/07/11 11:07:36 by lformank         ###   ########.fr       */
+/*   Updated: 2024/08/24 15:41:35 by lformank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,3 @@ int	ft_lowhexdec(unsigned int num, int count)
 	count += ft_lowhexdecz(num, count);
 	return (count);
 }
-
-/*int	main()
-{
-	unsigned int	i = 433333333;
-
-	ft_hexdec(i);
-	printf("\n%x", i);
-}*/

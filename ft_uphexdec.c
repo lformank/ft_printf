@@ -6,7 +6,7 @@
 /*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:34:10 by lformank          #+#    #+#             */
-/*   Updated: 2024/07/11 11:32:27 by lformank         ###   ########.fr       */
+/*   Updated: 2024/08/24 15:41:12 by lformank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,3 @@ int	ft_uphexdec(unsigned int num, int count)
 	count += ft_uphexdecz(num, count);
 	return (count);
 }
-
-/*int	main()
-{
-	ft_uphexdec(150047, 0);
-	printf("\n%X", 150047);
-}*/

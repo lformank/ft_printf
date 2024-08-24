@@ -6,7 +6,7 @@
 /*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 13:16:08 by lformank          #+#    #+#             */
-/*   Updated: 2024/07/11 10:53:43 by lformank         ###   ########.fr       */
+/*   Updated: 2024/08/24 15:41:42 by lformank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,3 @@ int	ft_int(int num, int count)
 	}
 	return (count);
 }
-
-/*int	main(void)
-{
-	ft_putnbr_fd(-15060, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(15060, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(0, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(-2147483648, -1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(2147483647, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(5, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(-5, 1);
-}*/

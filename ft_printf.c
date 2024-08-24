@@ -6,7 +6,7 @@
 /*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:34:20 by lformank          #+#    #+#             */
-/*   Updated: 2024/07/05 17:27:34 by lformank         ###   ########.fr       */
+/*   Updated: 2024/08/24 15:40:03 by lformank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,35 +68,46 @@ int	ft_printf(const char *format, ...)
 	return (count + i);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	int	i = 3338;
-	int	negativ = -2147483648;
+	int	i = -100;
+	int j = -100;
+//	int	negativ = -2147483648;
 
 	printf(" %d\n", ft_printf("uz tu %x minuty %s %p", 4, "magore!", &i));
 	printf(" %d\n", printf("uz tu %x minuty %s %p", 4, "magore!", &i));
-	printf(" %d\n", ft_printf("%cz tu %x minuty %s %%", 'u', 4, "magore!"));
-	printf(" %d\n", printf("%cz tu %x minuty %s %%", 'u', 4, "magore!"));
-	printf(" %d\n", ft_printf("%cz tu %x minuty ", 'u', 4));
-	printf(" %d\n", printf("%cz tu %x minuty ", 'u', 4));
+	printf(" %d\n", ft_printf("%% %cz tu %x minuty %s %%", 'u', 4, "magore!"));
+	printf(" %d\n", printf("%% %cz tu %x minuty %s %%", 'u', 4, "magore!"));
+	printf(" %d\n", ft_printf("%cz tu %x minuty ", 'u', -1));
+	printf(" %d\n", printf("%cz tu %x minuty ", 'u', -1));
 	printf(" %d\n", ft_printf("%coze", 'c'));
 	printf(" %d\n", printf("%coze", 'c'));
 	printf(" %d\n", ft_printf("%sze", "co"));
 	printf(" %d\n", printf("%sze", "co"));
 	printf(" %d\n", ft_printf("adresa je %p", &i));
 	printf(" %d\n", printf("adresa je %p", &i));
-	printf(" %d\n", ft_printf("%x minut", i));
-	printf(" %d\n", printf("%x minut", i));
-	printf(" %d\n", ft_printf("%X minut", i));
-	printf(" %d\n", printf("%X minut", i));
-	printf(" %d\n", ft_printf("%x procent", i));
-	printf(" %d\n", printf("%x procent", i));
+	printf(" %d\n", ft_printf("%x minut", j));
+	printf(" %d\n", printf("%x minut", j));
+	printf(" %d\n", ft_printf("%X minut", j));
+	printf(" %d\n", printf("%X minut", j));
+	printf(" %d\n", ft_printf("%x procent", j));
+	printf(" %d\n", printf("%x procent", j));
 	printf(" %d\n", ft_printf("bejt %s", "ty magore!!"));
 	printf(" %d\n", printf("bejt %s", "ty magore!!"));
-	printf(" %d\n", ft_printf("%d procent", i));
-	printf(" %d\n", printf("%d procent", i));
-	printf(" %d\n", ft_printf("%i procent", negativ));
-	printf(" %d\n", printf("%i procent", negativ));
-	printf(" %d\n", ft_printf("%u procent", i));
-	printf(" %d\n", printf("%u procent", i));
-}
+	printf(" %d\n", ft_printf("%d procent", j));
+	printf(" %d\n", printf("%d procent", j));
+	printf(" %d\n", ft_printf("%i procent", j));
+	printf(" %d\n", printf("%i procent", j));
+	printf(" %d\n", ft_printf("%u procent", j));
+	printf(" %d\n", printf("%u procent", j));
+	printf(" %d\n", ft_printf(" %-1c%c %c ", '0', 0, '1'));
+	printf(" %d\n", printf(" %c%c %c ", '0', 0, '1'));
+	printf(" %d\n", ft_printf(" %c %c %c ", 0, '1', '2'));
+	printf(" %d\n", printf(" %c %c %c ", 0, '1', '2'));
+//	printf(" %d\n", ft_printf("%%%"));
+//	printf(" %d\n", printf("%%%"));
+	printf(" %d\n", ft_printf(" NULL %s NULL ", NULL));
+//	printf(" %d\n", printf(" NULL %s NULL ", ""));
+	printf(" %d\n", ft_printf(" %p %p ", NULL, NULL));
+	printf(" %d\n", printf(" %p %p ", NULL, NULL));
+}*/

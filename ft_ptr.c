@@ -6,7 +6,7 @@
 /*   By: lformank <lformank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:23:42 by lformank          #+#    #+#             */
-/*   Updated: 2024/07/11 11:19:02 by lformank         ###   ########.fr       */
+/*   Updated: 2024/08/24 15:41:07 by lformank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ int	ft_ptr(unsigned long num, int count)
 {
 	if (num == 0)
 	{
-		write (1, "0", 1);
-		count++;
+		write(1, "(nil)", 5);
+		count += 5;
 		return (count);
 	}
 	write(1, "0x", 2);
@@ -63,11 +63,3 @@ int	ft_ptr(unsigned long num, int count)
 	count += ft_ptrhexdec(num, count);
 	return (count);
 }
-
-/*int	main()
-{
-	char	*i = "1000";
-	
-	printf("\n%d\n", ft_ptr((unsigned long)&i, 0));
-	printf("%d\n", printf("%p\n", &i));
-}*/
