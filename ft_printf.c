@@ -72,7 +72,6 @@ int	ft_printf(const char *format, ...)
 {
 	int	i = -100;
 	int j = -100;
-//	int	negativ = -2147483648;
 
 	printf(" %d\n", ft_printf("uz tu %x minuty %s %p", 4, "magore!", &i));
 	printf(" %d\n", printf("uz tu %x minuty %s %p", 4, "magore!", &i));
@@ -104,10 +103,8 @@ int	ft_printf(const char *format, ...)
 	printf(" %d\n", printf(" %c%c %c ", '0', 0, '1'));
 	printf(" %d\n", ft_printf(" %c %c %c ", 0, '1', '2'));
 	printf(" %d\n", printf(" %c %c %c ", 0, '1', '2'));
-//	printf(" %d\n", ft_printf("%%%"));
-//	printf(" %d\n", printf("%%%"));
 	printf(" %d\n", ft_printf(" NULL %s NULL ", NULL));
-//	printf(" %d\n", printf(" NULL %s NULL ", ""));
+	printf(" %d\n", printf(" NULL %s NULL ", ""));
 	printf(" %d\n", ft_printf(" %p %p ", NULL, NULL));
 	printf(" %d\n", printf(" %p %p ", NULL, NULL));
 }*/
